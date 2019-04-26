@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/main.cpp
+iostream
+-
+mangoFruit.h
+/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.cpp
+mangoFruit.h
+/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.h
+iostream
+-
+
+/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.h
+iostream
+-
+
