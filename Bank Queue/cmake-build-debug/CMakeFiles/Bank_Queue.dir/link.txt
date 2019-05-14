@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Bank_Queue.dir/main.cpp.o CMakeFiles/Bank_Queue.dir/Cashier.cpp.o CMakeFiles/Bank_Queue.dir/Customer.cpp.o  -o Bank_Queue 

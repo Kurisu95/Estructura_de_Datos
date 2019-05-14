@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/Cashier.h
+iostream
+-
+Customer.h
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/Customer.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/Customer.h
+string
+-
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/main.cpp
+iostream
+-
+Cashier.h
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/Cashier.h
+Customer.h
+/Users/christianrivera/Documents/Estructura_de_Datos/Bank Queue/Customer.h
+

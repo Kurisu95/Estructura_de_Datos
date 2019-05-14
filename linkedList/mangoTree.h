@@ -7,25 +7,28 @@
 #include <iostream>
 #include "mangoFruit.h"
 
-using namespace  std;
+class mangoTree
+{
 
-class mangoTree{
-private :
-    int mangoCounter;
+private:
+    int counter;
     void increaseCounter();
     void decreaseCounter();
 
-public :
-    mangoFruit* first;
-    mangoFruit* last;
+public:
+    mangoFruit *head;
+    mangoFruit *tail;
     mangoTree();
-    int addMangoFruit(mangoFruit* m);
-    int insertMangoFruit(mangoFruit* m, int position);
-    int deleteMangoFruit(int position);
-    void printMangoWeight();
-
-
+    virtual ~mangoTree();
+    int addMango(mangoFruit *mango);
+    int insertMango(mangoFruit *mango, int pos);
+    int deleteMango(int pos);
     int getCounter();
+    void printMangoTree();
+    int getFruitQuantity();
+    bool fruitMaxCapacityExceeded();
+    bool treeMaxWeightExceeded();
+    double getTotalWeight();
 };
 
 

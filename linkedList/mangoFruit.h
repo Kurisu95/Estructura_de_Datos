@@ -6,18 +6,23 @@
 #define ARBOLDEMANGO_MANGOFRUIT_H
 #include <iostream>
 
-using namespace  std;
+using namespace std;
 
-class mangoFruit{
+class mangoFruit
+{
+
 private:
     double weight;
+
 public:
+
+    mangoFruit *next;
+    mangoFruit *prev;
     mangoFruit();
-    mangoFruit(double w);
-    mangoFruit* next;
-    mangoFruit* prev;
+    mangoFruit(double);
+    virtual ~mangoFruit();
+    void setWeight(double);
     double getWeight();
-    void setWeight(double w);
 
 };
 

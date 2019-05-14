@@ -2,24 +2,36 @@
 // Created by Christian Rivera on 2019-04-24.
 //
 #include "mangoFruit.h"
-#include <iostream>
 
-mangoFruit::mangoFruit() {
+
+
+mangoFruit::mangoFruit()
+{
     setWeight(0);
-    next = 0;
-    prev = 0;
+    this->next = NULL;
+    this->prev = NULL;
 }
 
-mangoFruit::mangoFruit(double w) {
+
+mangoFruit::mangoFruit(double w)
+{
     setWeight(w);
-    next = 0;
-    prev = 0;
+    this->next = nullptr;
+    this->prev = nullptr;
+
 }
 
-void mangoFruit::setWeight(double w) {
-    weight = w - (0.1 * w);
+mangoFruit::~mangoFruit()
+{
+
 }
 
-double mangoFruit::getWeight() {
+void mangoFruit::setWeight(double w)
+{
+    this->weight = w - (0.1*w);
+}
+
+double mangoFruit::getWeight()
+{
     return this->weight;
 }
