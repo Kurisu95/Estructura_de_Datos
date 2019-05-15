@@ -9,21 +9,25 @@ int main() {
 
     sf::RenderWindow window(sf::VideoMode(1000,700),"Awesome");
     sf::RectangleShape player(sf::Vector2f(100.0f,100.0f));
-    player.setFillColor(sf::Color::Red);
+    cout << window.getSize().x <<endl;
+    cout << window.getSize().y <<endl;
+    player.setPosition(window.getSize().x/2 - (player.getSize().x / 2), window.getSize().y/2 - (player.getSize().y/2));
+    sf::Texture playerTexture;
+    playerTexture.loadFromFile("./Assets/mango.png");
+    player.setTexture(&playerTexture);
+//    sf::Font font;
 
-    sf::Font font;
-
-    font.loadFromFile("open-sans/OpenSans-Bold.ttf");
+//    font.loadFromFile("open-sans/OpenSans-Bold.ttf");
 
 
 
-    sf::Text text("Hello World",font,11);
+//    sf::Text text("Hello World",font,11);
 
-    text.setCharacterSize(32);
-
-    text.setPosition(window.getSize().x/2 - text.getGlobalBounds().width/2,
-
-                     window.getSize().y/2 - text.getGlobalBounds().height/2);
+//    text.setCharacterSize(32);
+//
+//    text.setPosition(window.getSize().x/2 - text.getGlobalBounds().width/2,
+//
+//                     window.getSize().y/2 - text.getGlobalBounds().height/2);
 
 
 
