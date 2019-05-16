@@ -65,7 +65,7 @@ int Queue::Dequeue() {
     else {
 
         c = head;
-        cout << "\nDequeing: " << c->getAverageTime() << endl;
+        cout << "\nDequeing: " << c->getOperationType() << endl;
         head = c->next;
         c->next = nullptr;
         delete c;
@@ -100,9 +100,10 @@ void Queue::print() {
     else {
 
         while (temp != NULL) {
-
-            cout << temp->getAverageTime() << endl;
+            cout << "Operation Time: " ;
             cout << temp->getOperationType() << endl;
+            cout << "Average Time: " ;
+            cout << temp->getAverageTime() << endl;
             temp = temp->next;
         }
 

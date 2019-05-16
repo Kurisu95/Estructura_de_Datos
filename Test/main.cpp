@@ -12,7 +12,7 @@ int main() {
 
     while (!exit) {
 
-        cout << "---Bank Queue---" << endl;
+        cout << "---Queue---" << endl;
         cout << "1. Enqueue" << endl;
         cout << "2. Dequeue" << endl;
         cout << "3. Print Queue" << endl;
