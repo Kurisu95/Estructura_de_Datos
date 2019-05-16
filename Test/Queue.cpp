@@ -8,77 +8,64 @@ using namespace std;
 
 Queue::Queue() {
 
-    head = nullptr;
-    tail = nullptr;
-    tail->setOperationType(100);
-    counter = 0;
-
+    sentinel->setOperationType(100);
+    sentinel->setAverageTime(100);
+    sentinel->next = sentinel;
+    head = sentinel;
 }
 
-int Queue::getCounter() {
+int Queue::Enqueue(Node *n) {
 
-    return counter;
-
-}
-
-void Queue::increaseCounter() {
-
-    counter++;
-
-}
-
-void Queue::decreaseCounter() {
-
-    counter--;
-
-}
-
-int Queue::Enqueue(Node *c) {
+    Node * temp;
+    Node *temp2 = new Node();
+    temp = head;
 
     if (isEmpty()) {
 
-        head = c;
-        tail = c;
+        head = n;
+        n->next = sentinel;
+        return 0;
 
     }
     else {
 
-        tail->next = c;
-        tail = c;
-        c->next = nullptr;
+        while (temp->getOperationType() != sentinel->getOperationType()) {
 
+            temp2 = temp;
+            temp = temp->next;
+
+        }
+        temp2->next = n;
+        n->next = temp;
+        return 0;
     }
-    increaseCounter();
-    return 0;
 
 }
 
 int Queue::Dequeue() {
 
-    Node *c;
+    Node *temp;
 
     if (isEmpty()) {
 
         cout << "Queue is empty" << endl;
-        return -2;
+        return 0;
+
     }
     else {
 
-        c = head;
-        cout << "\nDequeing: " << c->getOperationType() << endl;
-        head = c->next;
-        c->next = nullptr;
-        delete c;
-
-        decreaseCounter();
+        temp = head;
+        cout << "Dequeing: " << temp->getOperationType() << endl;
+        head = temp->next;
+        temp->next = nullptr;
+        delete temp;
         return 0;
-
     }
 
 }
 
 bool Queue::isEmpty() {
-    return (counter == 0);
+    return (head == sentinel);
 }
 
 void Queue::print() {
@@ -86,17 +73,17 @@ void Queue::print() {
     Node *temp;
     temp = head;
 
-    if (counter == 0) {
+    if (isEmpty()) {
 
         cout << "Emtpy queue" << endl;
 
     }
     else {
 
-        while (temp != NULL) {
-            cout << "Operation Time: " ;
+        while (temp->getOperationType() != sentinel->getOperationType()) {
+            cout << "Operation Time: ";
             cout << temp->getOperationType() << endl;
-            cout << "Average Time: " ;
+            cout << "Average Time: ";
             cout << temp->getAverageTime() << endl;
             temp = temp->next;
         }

@@ -12,17 +12,12 @@ public:
     Queue();
     int Enqueue(Node *);
     int Dequeue();
-    int getCounter();
     bool isEmpty();
     void print();
     Node *head;
-    Node *tail;
+    Node *sentinel = new Node();
 
 private:
-
-    void increaseCounter();
-    void decreaseCounter();
-    int counter;
 
 };
 
