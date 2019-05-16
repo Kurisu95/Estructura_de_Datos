@@ -5,8 +5,6 @@
 #include "Customer.h"
 #include <stdlib.h>
 #include <time.h>
-#include <iostream>
-using namespace std;
 
 
 Customer::Customer() {
@@ -16,10 +14,10 @@ Customer::Customer() {
 
 }
 
-Customer::Customer(int t) {
+Customer::Customer(int t, opType op) {
 
     setIdNumber(t);
-    setOperationType();
+    setOperationType(op);
     next = nullptr;
 
 }
@@ -42,27 +40,28 @@ string Customer::getOperationType() {
 
 }
 
-void Customer::setOperationType() {
-    string ot = "";
+void Customer::setOperationType(opType ot) {
 
     srand(time(NULL));
     int rd = rand() % 3;
 
-    switch(rd){
-        case 0:
-            ot = deposit;
-            operation = "Deposit";
-            break;
-        case 1:
-            ot = withdrawal;
-            operation = "Withdrawal";
-            break;
-        case 2:
-            ot = query;
-            operation = "Query";
-            break;
-        default:
-            operation = "Kicked out of the line";
+    if (rd == 0) {
+
+        ot = deposit;
+        operation = "Deposit";
+
+    }
+    else if (rd == 1) {
+
+        ot = withdrawal;
+        operation = "Withdrawal";
+
+    }
+    else {
+
+        ot = query;
+        operation = "Query";
+
     }
 
 }

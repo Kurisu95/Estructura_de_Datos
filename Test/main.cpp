@@ -1,19 +1,18 @@
 #include <iostream>
-#include "Cashier.h"
-#include "Customer.h"
+#include "Queue.h"
+#include "Node.h"
 
 using namespace std;
 
 int main() {
 
     bool exit = false;
-    Cashier cm;
-    int op = 0, test = 0, id = 0;
-    opType operation = deposit;
+    Queue cm;
+    int op = 0, test = 0, ot = 0;
 
     while (!exit) {
 
-        cout << "---Queue---" << endl;
+        cout << "---Bank Queue---" << endl;
         cout << "1. Enqueue" << endl;
         cout << "2. Dequeue" << endl;
         cout << "3. Print Queue" << endl;
@@ -26,10 +25,10 @@ int main() {
             case 1: {
 
                 cout << "-> Enqueue Customer <-" << endl;
-                cout << "Insert Customer's ID: ";
-                cin >> id;
+                cout << "Insert Customer's Operation Type 0-2: ";
+                cin >> ot;
 
-                Customer *cEnqueue = new Customer(id, operation);
+                Node *cEnqueue = new Node(ot);
                 test = cm.Enqueue(cEnqueue);
 
                 if (test == 0) {

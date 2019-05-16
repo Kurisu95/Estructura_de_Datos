@@ -1,0 +1,3 @@
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/cmake-build-debug/CMakeFiles/Test.dir

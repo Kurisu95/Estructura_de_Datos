@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/Node.h
+string
+-
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/Queue.cpp
+Queue.h
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/Queue.h
+iostream
+-
+
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/Queue.h
+Node.h
+/Users/christianrivera/Documents/Estructura_de_Datos/Test/Node.h
+

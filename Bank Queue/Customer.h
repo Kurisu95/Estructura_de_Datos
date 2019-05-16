@@ -22,9 +22,9 @@ class Customer {
 
 public:
     Customer();
-    Customer(int);
+    Customer(int, opType);
     string getOperationType();
-    void setOperationType();
+    void setOperationType(opType);
     int getIdNumber();
     void setIdNumber(int);
     Customer *next;
