@@ -91,3 +91,27 @@ void Queue::print() {
     }
 
 }
+
+int Queue::TotalTime() {
+
+    Node *temp;
+    temp = head;
+    int total=0;
+
+    if (isEmpty()) {
+
+        cout << "Total Time: ";
+        cout << total << endl;
+
+    }
+    else {
+
+        while (temp->getOperationType() != sentinel->getOperationType()) {
+            total = total + temp->getAverageTime();
+            temp = temp->next;
+        }
+
+    }
+    return total;
+
+}

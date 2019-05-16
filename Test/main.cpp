@@ -16,7 +16,8 @@ int main() {
         cout << "1. Enqueue" << endl;
         cout << "2. Dequeue" << endl;
         cout << "3. Print Queue" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. Print Queue Total" << endl;
+        cout << "5. Exit" << endl;
         cout << "Please type your option: ";
         cin >> op;
 
@@ -55,8 +56,19 @@ int main() {
 
                 cm.print();
                 break;
-
             case 4:
+                cout << "-> Getting Queue Total <-";
+
+                test = cm.TotalTime();
+
+                if (test) {
+
+                    cout << "\tTotal: ";
+                    cout << test <<endl;
+
+                }
+                break;
+            case 5:
 
                 exit = true;
                 break;

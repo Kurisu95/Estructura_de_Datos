@@ -16,6 +16,8 @@ public:
     void print();
     Node *head;
     Node *sentinel = new Node();
+    void maxRep();
+    int TotalTime();
 
 private:
 
