@@ -78,13 +78,7 @@ int Queue::Dequeue() {
 }
 
 bool Queue::isEmpty() {
-    if (head == nullptr && tail == nullptr) {
-        return true;
-    }
-    else {
-        return false;
-    }
-
+    return (counter == 0);
 }
 
 void Queue::print() {
