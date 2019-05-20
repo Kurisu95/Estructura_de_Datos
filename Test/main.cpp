@@ -17,7 +17,8 @@ int main() {
         cout << "2. Dequeue" << endl;
         cout << "3. Print Queue" << endl;
         cout << "4. Print Queue Total" << endl;
-        cout << "5. Exit" << endl;
+        cout << "5. Print Max Rep" << endl;
+        cout << "6. Exit" << endl;
         cout << "Please type your option: ";
         cin >> op;
 
@@ -69,6 +70,11 @@ int main() {
                 }
                 break;
             case 5:
+                cout << "-> Getting Max Rep <-";
+
+                cm.maxRep();
+                break;
+            case 6:
 
                 exit = true;
                 break;

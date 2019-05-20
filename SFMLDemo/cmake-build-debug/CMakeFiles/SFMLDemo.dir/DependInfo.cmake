@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/Menu.cpp" "/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/cmake-build-debug/CMakeFiles/SFMLDemo.dir/Menu.cpp.o"
   "/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/main.cpp" "/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/cmake-build-debug/CMakeFiles/SFMLDemo.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

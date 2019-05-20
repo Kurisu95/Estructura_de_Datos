@@ -17,7 +17,7 @@ Queue::Queue() {
 int Queue::Enqueue(Node *n) {
 
     Node * temp;
-    Node *temp2 = new Node();
+    Node *temp2;
     temp = head;
 
     if (isEmpty()) {
@@ -113,5 +113,46 @@ int Queue::TotalTime() {
 
     }
     return total;
+
+}
+
+void Queue::maxRep() {
+    int deposit, withdrawal, query;
+    Node *temp;
+    temp = head;
+
+    if (isEmpty()) {
+
+        cout << "Max Time: ";
+        cout << 0 << endl;
+
+    }
+    else {
+
+        while (temp->getOperationType() != sentinel->getOperationType()) {
+            if(temp->getOperationType() == "Deposit"){
+                deposit++;
+            }else if(temp->getOperationType() == "Withdrawal"){
+                withdrawal++;
+            }else if(temp->getOperationType() == "Query"){
+                query++;
+            }
+            temp = temp->next;
+        }
+        if(deposit >= withdrawal && deposit >= query)
+        {
+            cout << "Largest number is Deposit with: " << deposit <<endl;
+        }
+
+        if(withdrawal >= deposit && withdrawal >= query)
+        {
+            cout << "Largest number is Withdrawal with: " << withdrawal <<endl;
+        }
+
+        if(query >= deposit && query >= withdrawal) {
+            cout << "Largest number Query with: " << query <<endl;
+        }
+
+    }
 
 }

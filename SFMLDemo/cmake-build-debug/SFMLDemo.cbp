@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/Menu.cpp">
+			<Option target="SFMLDemo"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/Menu.h">
+			<Option target="SFMLDemo"/>
+		</Unit>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/main.cpp">
 			<Option target="SFMLDemo"/>
 		</Unit>

@@ -9,15 +9,6 @@
 
 using namespace std;
 
-
-enum opType {
-
-    deposit = 0,
-    withdrawal = 1,
-    query = 2
-
-};
-
 class Node {
 
 public:
