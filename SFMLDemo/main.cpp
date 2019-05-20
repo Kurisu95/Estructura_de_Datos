@@ -45,22 +45,22 @@ sf::RectangleShape addSFMLMango2(int weight, int position){
     mango.setFillColor(sf::Color(255, 110, 0));
     switch (position){
         case 1:
-            mango.setPosition(100.0f,700.0f);
+            mango.setPosition(1100.0f,700.0f);
             break;
         case 2:
-            mango.setPosition(80.0f,450.0f);
+            mango.setPosition(1080.0f,450.0f);
             break;
         case 3:
-            mango.setPosition(250.0f,550.0f);
+            mango.setPosition(1250.0f,550.0f);
             break;
         case 4:
-            mango.setPosition(350.0f,350.0f);
+            mango.setPosition(1350.0f,350.0f);
             break;
         case 5:
-            mango.setPosition(600.0f,450.0f);
+            mango.setPosition(1600.0f,450.0f);
             break;
         case 6:
-            mango.setPosition(700.0f,600.0f);
+            mango.setPosition(1700.0f,600.0f);
             break;
     }
 
@@ -134,9 +134,7 @@ int main() {
                                 if(menu1view)
                                     menu.MoveUp();
                                 if(menu2view)
-                                    menu.MoveUp();
-                                if(menu3view)
-                                    menu.MoveUp();
+                                    menu2.MoveUp();
                             }
                             break;
 
@@ -145,73 +143,129 @@ int main() {
                                 if(menu1view)
                                     menu.MoveDown();
                                 if(menu2view)
-                                    menu.MoveDown();
-                                if(menu3view)
-                                    menu.MoveDown();
+                                    menu2.MoveDown();
                             }
                             break;
 
                         case sf::Keyboard::Return:
                             if(!treeView){
-                                switch (menu.GetPressedItem())
-                                {
-                                    case 0:
-                                        std::cout << "Adding Fruit" << std::endl;
-                                        switch (mangos.size()){
-                                            case 0:{
-                                                if(menu1view)
-                                                    addSFMLMango1(10,1);
-                                                if(menu2view)
-                                                    addSFMLMango1(10,1);
-                                                if(menu3view)
-                                                    menu.MoveDown();
+                                if(menu1view){
+                                    switch (menu.GetPressedItem())
+                                    {
+                                        case 0:
+                                            std::cout << "Adding Fruit" << std::endl;
 
+                                            switch (mangos.size()){
+                                                case 0:{
+                                                    addSFMLMango1(10,1);
+                                                }
+                                                    break;
+                                                case 1:{
+                                                    addSFMLMango1(10,2);
+                                                }
+                                                    break;
+                                                case 2:{
+                                                    addSFMLMango1(10,3);
+                                                }
+                                                    break;
+                                                case 3:{
+                                                    addSFMLMango1(10,4);
+                                                }
+                                                    break;
+                                                case 4:{
+                                                    addSFMLMango1(10,5);
+                                                }
+                                                    break;
+                                                case 5:{
+                                                    addSFMLMango1(10,6);
+                                                }
+                                                    break;
+                                                default:
+                                                    cout << "LIMIT REACHED!!"<<endl;
+                                                    break;
                                             }
-                                                break;
-                                            case 1:{
-                                                addSFMLMango1(10,2);
-                                            }
-                                                break;
-                                            case 2:{
-                                                addSFMLMango1(10,3);
-                                            }
-                                                break;
-                                            case 3:{
-                                                addSFMLMango1(10,4);
-                                            }
-                                                break;
-                                            case 4:{
-                                                addSFMLMango1(10,5);
-                                            }
-                                                break;
-                                            case 5:{
-                                                addSFMLMango1(10,6);
-                                            }
-                                                break;
-                                            default:
-                                                cout << "LIMIT REACHED!!"<<endl;
-                                                break;
-                                        }
-                                        treeView = true;
-                                        menu1view = false;
-                                        menu2view = false;
+                                            treeView = true;
+                                            menu1view = false;
 
-                                        break;
-                                    case 1:
-                                        std::cout << "Inserting Fruit" << std::endl;
-                                        break;
-                                    case 2:
-                                        std::cout << "Deleting Fruit" << std::endl;
-                                        if(mangos.size())
-                                            mangos.erase(mangos.begin());
-                                        treeView = true;
-                                        break;
-                                    case 3:
-                                        std::cout << "Merging Mango Trees" << std::endl;
-                                        break;
-                                    case 4:
-                                        treeView = true;
-                                        break;
+                                            break;
+                                        case 1:
+                                            std::cout << "Inserting Fruit" << std::endl;
+                                            break;
+                                        case 2:
+                                            std::cout << "Deleting Fruit" << std::endl;
+                                            if(mangos.size()){
+                                                mangos.erase(mangos.begin());
+                                            }
+                                            treeView = true;
+                                            menu1view = false;
+                                            break;
+                                        case 3:
+                                            std::cout << "Merging Mango Trees" << std::endl;
+                                            break;
+                                        case 4:
+                                            treeView = true;
+                                            menu1view = false;
+                                            break;
+                                    }
+                                }
+                                if(menu2view){
+                                    switch (menu2.GetPressedItem())
+                                    {
+                                        case 0:
+                                            std::cout << "Adding Fruit" << std::endl;
+
+                                            switch (mangos2.size()){
+                                                case 0:{
+                                                    addSFMLMango2(10,1);
+                                                }
+                                                    break;
+                                                case 1:{
+                                                    addSFMLMango2(10,2);
+                                                }
+                                                    break;
+                                                case 2:{
+                                                    addSFMLMango2(10,3);
+                                                }
+                                                    break;
+                                                case 3:{
+                                                    addSFMLMango2(10,4);
+                                                }
+                                                    break;
+                                                case 4:{
+                                                    addSFMLMango2(10,5);
+                                                }
+                                                    break;
+                                                case 5:{
+                                                    addSFMLMango2(10,6);
+                                                }
+                                                    break;
+                                                default:
+                                                    cout << "LIMIT REACHED!!"<<endl;
+                                                    break;
+                                            }
+                                            treeView = true;
+                                            menu2view = false;
+
+                                            break;
+                                        case 1:
+                                            std::cout << "Inserting Fruit" << std::endl;
+                                            break;
+                                        case 2:
+                                            std::cout << "Deleting Fruit" << std::endl;
+                                            if(mangos2.size())
+                                                mangos2.erase(mangos2.begin());
+
+                                            treeView = true;
+                                            menu2view = false;
+                                            break;
+                                        case 3:
+                                            std::cout << "Merging Mango Trees" << std::endl;
+                                            break;
+                                        case 4:
+                                            treeView = true;
+                                            menu2view = false;
+                                            break;
+                                    }
                                 }
                             }
 
@@ -243,10 +297,14 @@ int main() {
                     mango.setTexture(&mangoTexture);
                     window.draw(mango);
                 }
+                for (sf::RectangleShape mango : mangos2){
+                    mango.setTexture(&mangoTexture);
+                    window.draw(mango);
+                }
                 window.draw(playerText);
-            }else if(menu3view){
-                menu.draw(window);
-            }else{
+            }else if(menu2view){
+                menu2.draw(window);
+            }else if(menu1view){
                 menu.draw(window);
             }
 
@@ -267,7 +325,7 @@ int main() {
                sf::Mouse::getPosition(window).y > 300 && sf::Mouse::getPosition(window).y <800
                     ){
                 treeView = false;
-                menu1view = true;
+                menu2view = true;
                 cout << "clicking second tree"<<endl;
             }
 
@@ -282,12 +340,16 @@ int main() {
                 mango.setTexture(&mangoTexture);
                 window.draw(mango);
             }
+            for (sf::RectangleShape mango : mangos2){
+                mango.setTexture(&mangoTexture);
+                window.draw(mango);
+            }
             window.draw(playerText);
 
-        }else if(menu3view){
-            menu.draw(window);
+        }else if(menu2view){
+            menu2.draw(window);
         }
-        else{
+        else if(menu1view){
             menu.draw(window);
         }
 
