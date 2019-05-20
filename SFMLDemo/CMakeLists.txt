@@ -3,7 +3,7 @@ project(SFMLDemo)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Menu.cpp Menu.h)
+set(SOURCE_FILES main.cpp Menu.cpp Menu.h mangoTree.cpp mangoTree.h mangoFruit.cpp mangoFruit.h)
 add_executable(SFMLDemo ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

@@ -2,10 +2,10 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="arbolDeMango"/>
+		<Option title="linkedList"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug"/>
@@ -37,43 +37,43 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="arbolDeMango">
-				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/arbolDeMango" prefix_auto="0" extension_auto="0"/>
+			<Target title="linkedList">
+				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/linkedList" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 arbolDeMango"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="arbolDeMango/fast">
-				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/arbolDeMango" prefix_auto="0" extension_auto="0"/>
+			<Target title="linkedList/fast">
+				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/linkedList" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 arbolDeMango/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 linkedList/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -81,28 +81,19 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/Menu.cpp">
-			<Option target="arbolDeMango"/>
+			<Option target="linkedList"/>
 		</Unit>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/Menu.h">
-			<Option target="arbolDeMango"/>
+			<Option target="linkedList"/>
 		</Unit>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/main.cpp">
-			<Option target="arbolDeMango"/>
-		</Unit>
-		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.cpp">
-			<Option target="arbolDeMango"/>
-		</Unit>
-		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoFruit.h">
-			<Option target="arbolDeMango"/>
-		</Unit>
-		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoTree.cpp">
-			<Option target="arbolDeMango"/>
-		</Unit>
-		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/mangoTree.h">
-			<Option target="arbolDeMango"/>
+			<Option target="linkedList"/>
 		</Unit>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

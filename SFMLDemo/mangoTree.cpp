@@ -1,6 +1,7 @@
 //
-// Created by Christian Rivera on 2019-04-25.
+// Created by Christian Rivera on 2019-05-20.
 //
+
 #include "mangoTree.h"
 
 
@@ -194,7 +195,7 @@ int mangoTree::getFruitQuantity()
 
 bool mangoTree::fruitMaxCapacityExceeded()
 {
-    int maxCapacity = 50;
+    int maxCapacity = 6;
 
     if (this->getCounter() > maxCapacity)
     {

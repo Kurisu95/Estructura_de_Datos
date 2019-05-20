@@ -89,6 +89,18 @@
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/main.cpp">
 			<Option target="SFMLDemo"/>
 		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.cpp">
+			<Option target="SFMLDemo"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.h">
+			<Option target="SFMLDemo"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoTree.cpp">
+			<Option target="SFMLDemo"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoTree.h">
+			<Option target="SFMLDemo"/>
+		</Unit>
 		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

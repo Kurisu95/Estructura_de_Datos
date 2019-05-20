@@ -81,6 +81,8 @@ CMakeFiles/SFMLDemo.dir/Menu.cpp.o
 CMakeFiles/SFMLDemo.dir/main.cpp.o
  /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/Menu.h
  /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/main.cpp
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.h
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoTree.h
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -155,3 +157,10 @@ CMakeFiles/SFMLDemo.dir/main.cpp.o
  /usr/local/include/SFML/Window/Window.hpp
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.o
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.cpp
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.h
+CMakeFiles/SFMLDemo.dir/mangoTree.cpp.o
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoFruit.h
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoTree.cpp
+ /Users/christianrivera/Documents/Estructura_de_Datos/SFMLDemo/mangoTree.h

@@ -177,6 +177,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mangoFruit.o: mangoFruit.cpp.o
+
+.PHONY : mangoFruit.o
+
+# target to build an object file
+mangoFruit.cpp.o:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.o
+.PHONY : mangoFruit.cpp.o
+
+mangoFruit.i: mangoFruit.cpp.i
+
+.PHONY : mangoFruit.i
+
+# target to preprocess a source file
+mangoFruit.cpp.i:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.i
+.PHONY : mangoFruit.cpp.i
+
+mangoFruit.s: mangoFruit.cpp.s
+
+.PHONY : mangoFruit.s
+
+# target to generate assembly for a file
+mangoFruit.cpp.s:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.s
+.PHONY : mangoFruit.cpp.s
+
+mangoTree.o: mangoTree.cpp.o
+
+.PHONY : mangoTree.o
+
+# target to build an object file
+mangoTree.cpp.o:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoTree.cpp.o
+.PHONY : mangoTree.cpp.o
+
+mangoTree.i: mangoTree.cpp.i
+
+.PHONY : mangoTree.i
+
+# target to preprocess a source file
+mangoTree.cpp.i:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoTree.cpp.i
+.PHONY : mangoTree.cpp.i
+
+mangoTree.s: mangoTree.cpp.s
+
+.PHONY : mangoTree.s
+
+# target to generate assembly for a file
+mangoTree.cpp.s:
+	$(MAKE) -f CMakeFiles/SFMLDemo.dir/build.make CMakeFiles/SFMLDemo.dir/mangoTree.cpp.s
+.PHONY : mangoTree.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mangoFruit.o"
+	@echo "... mangoFruit.i"
+	@echo "... mangoFruit.s"
+	@echo "... mangoTree.o"
+	@echo "... mangoTree.i"
+	@echo "... mangoTree.s"
 .PHONY : help
 
 

@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/linkedLi
 CMAKE_BINARY_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/arbolDeMango.dir
+# Target rules for target CMakeFiles/linkedList.dir
 
 # All Build rule for target.
-CMakeFiles/arbolDeMango.dir/all:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/depend
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target arbolDeMango"
-.PHONY : CMakeFiles/arbolDeMango.dir/all
+CMakeFiles/linkedList.dir/all:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/depend
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target linkedList"
+.PHONY : CMakeFiles/linkedList.dir/all
 
 # Include target in all.
-all: CMakeFiles/arbolDeMango.dir/all
+all: CMakeFiles/linkedList.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/arbolDeMango.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/arbolDeMango.dir/all
+CMakeFiles/linkedList.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/linkedList.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/linkedList/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/arbolDeMango.dir/rule
+.PHONY : CMakeFiles/linkedList.dir/rule
 
 # Convenience name for target.
-arbolDeMango: CMakeFiles/arbolDeMango.dir/rule
+linkedList: CMakeFiles/linkedList.dir/rule
 
-.PHONY : arbolDeMango
-
-# clean rule for target.
-CMakeFiles/arbolDeMango.dir/clean:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/clean
-.PHONY : CMakeFiles/arbolDeMango.dir/clean
+.PHONY : linkedList
 
 # clean rule for target.
-clean: CMakeFiles/arbolDeMango.dir/clean
+CMakeFiles/linkedList.dir/clean:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/clean
+.PHONY : CMakeFiles/linkedList.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/linkedList.dir/clean
 
 .PHONY : clean
 

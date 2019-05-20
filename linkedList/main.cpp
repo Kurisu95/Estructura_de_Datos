@@ -1,62 +1,32 @@
 #include <iostream>
+#include <list>
 #include "mangoFruit.h"
 #include "mangoTree.h"
 
 void MenuSecondMangoTree();
 void MenuMangoTree();
-void MainMenu();
 
 using namespace std;
 
 mangoTree t;
 mangoTree t2;
+mangoTree t3;
 
-int main(){
-
-    MainMenu();
-
-}
-
-void MainMenu(){
-    int option = 0;
-
-    do{
-
-        cout << "---MENU---" << endl;
-        cout << "Select Tree:" << endl;
-        cout << "1-First Tree" << endl;
-        cout << "2-Second Tree" << endl;
-        cout << "3-Merge Trees" << endl;
-        cout << "4-Exit" << endl;
-        cin >> option;
-
-        switch (option){
-            case 1:{
-                MenuMangoTree();
-                break;
-            }
-            case 2:{
-                MenuSecondMangoTree();
-                break;
-            }
-            case 3:{
-                cout <<"Merged Trees"<<endl;
-            }
-            default:
-                cout << "Unknown command please enter a valid option" << endl;
-                break;
-
-        }
-    }while (option != 4);
+int main()
+{
+    MenuMangoTree();
 }
 
 void MenuMangoTree()
 {
     int option = 0;
+    int option2tree = 0;
     int pos = 0;
     int test = 0;
     int mangoTreeCounter = 0;
     double weight;
+
+
 
 
     do
@@ -71,7 +41,8 @@ void MenuMangoTree()
         cout << "7-Get Tree Fruits" << endl;
         cout << "8-Create Second Tree" << endl;
         cout << "9-Print Both Mango Trees" << endl;
-        cout << "10-Exit Program" << endl;
+        cout << "10-Merge" << endl;
+        cout << "11- Exit" << endl;
 
         cin >> option;
 
@@ -82,8 +53,6 @@ void MenuMangoTree()
                 cout << "Adding Fruit to the Tree..." << endl;
                 cout << "Enter mango weight" << endl;
                 cin >> weight;
-                mangoFruit *mango = new mangoFruit(weight);
-                test = t.addMango(mango);
 
                 mangoTreeCounter++;
 
@@ -196,11 +165,117 @@ void MenuMangoTree()
                 t2.printMangoTree();
                 break;
 
+            case 10:
+            {
+                t.mergeTrees(t, t2);
+                if(t.fruitMaxCapacityExceeded() == true){
+                    cout << "Fruit Capacity at MAX" << endl;
+                    cout << "Want to delete a fruit?" << endl;
+                    cout << "1. Yes" << endl;
+                    cout << "2. No" << endl;
+                    int op = 0;
+                    cin >> op;
+
+                    switch (op) {
+                        case 1:
+                            cout << "Enter position you want to delete" << endl;
+                            cin >> pos;
+                            test = t.deleteMango(pos);
+                            if (test == 0)
+                            {
+                                cout << "Mango successfully deleted" << endl;
+                            }
+                            break;
+                        case 2:
+                            t.printMangoTree();
+                            break;
+                    }
+
+                }
+                else if (t.treeMaxWeightExceeded() == true) {
+                    cout << "Fruit Weight at MAX" << endl;
+                    cout << "Want to delete a fruit?" << endl;
+                    cout << "1. Yes" << endl;
+                    cout << "2. No" << endl;
+                    int op = 0;
+                    cin >> op;
+
+                    switch (op) {
+                        case 1:
+                            cout << "Enter position you want to delete" << endl;
+                            cin >> pos;
+                            test = t.deleteMango(pos);
+                            if (test == 0)
+                            {
+                                cout << "Mango successfully deleted" << endl;
+                            }
+                            break;
+                        case 2:
+                            t.printMangoTree();
+                            break;
+                    }
+                }
+                else if (t2.fruitMaxCapacityExceeded() == true) {
+                    cout << "Fruit Capacity at MAX" << endl;
+                    cout << "Want to delete a fruit?" << endl;
+                    cout << "1. Yes" << endl;
+                    cout << "2. No" << endl;
+                    int op = 0;
+                    cin >> op;
+
+                    switch (op) {
+                        case 1:
+                            cout << "Enter position you want to delete" << endl;
+                            cin >> pos;
+                            test = t2.deleteMango(pos);
+                            if (test == 0)
+                            {
+                                cout << "Mango successfully deleted" << endl;
+                            }
+                            break;
+                        case 2:
+                            t2.printMangoTree();
+                            break;
+                    }
+                }
+                else if (t2.treeMaxWeightExceeded() == true) {
+                    cout << "Fruit Weight at MAX" << endl;
+                    cout << "Want to delete a fruit?" << endl;
+                    cout << "1. Yes" << endl;
+                    cout << "2. No" << endl;
+                    int op = 0;
+                    cin >> op;
+
+                    switch (op) {
+                        case 1:
+                            cout << "Enter position you want to delete" << endl;
+                            cin >> pos;
+                            test = t2.deleteMango(pos);
+                            if (test == 0)
+                            {
+                                cout << "Mango successfully deleted" << endl;
+                            }
+                            break;
+                        case 2:
+                            t2.printMangoTree();
+                            break;
+                    }
+                }
+                else {
+                    cout << "Printing Merge Lists" << endl;
+                }
+            }
+                break;
+
+            case 11:
+
+                break;
+
             default:
                 cout << "Unknown command please enter a valid option" << endl;
                 break;
         }
-    } while (option != 10);
+    } while (option != 11);
 }
 
 
@@ -212,6 +287,9 @@ void MenuSecondMangoTree()
     int test = 0;
     int mangoTreeCounter = 0;
     double weight;
+
+    //mangoTree t2;
+
 
     do
     {
@@ -345,17 +423,4 @@ void MenuSecondMangoTree()
                 break;
         }
     } while (option != 8);
-}
-
-
-
-
-void PrintBothTrees()
-{
-
-}
-
-int main()
-{
-    MenuMangoTree();
 }

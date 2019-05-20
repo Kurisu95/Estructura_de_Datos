@@ -1,9 +1,11 @@
 //
-// Created by Christian Rivera on 2019-04-24.
+// Created by Christian Rivera on 2019-05-20.
 //
 
-#ifndef ARBOLDEMANGO_MANGOTREE_H
-#define ARBOLDEMANGO_MANGOTREE_H
+#ifndef SFMLDEMO_MANGOTREE_H
+#define SFMLDEMO_MANGOTREE_H
+
+
 #include <iostream>
 #include "mangoFruit.h"
 
@@ -37,4 +39,4 @@ public:
 };
 
 
-#endif //ARBOLDEMANGO_MANGOTREE_H
+#endif //SFMLDEMO_MANGOTREE_H

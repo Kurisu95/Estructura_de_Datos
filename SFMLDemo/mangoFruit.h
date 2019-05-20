@@ -1,9 +1,9 @@
 //
-// Created by Christian Rivera on 2019-04-24.
+// Created by Christian Rivera on 2019-05-20.
 //
 
-#ifndef ARBOLDEMANGO_MANGOFRUIT_H
-#define ARBOLDEMANGO_MANGOFRUIT_H
+#ifndef SFMLDEMO_MANGOFRUIT_H
+#define SFMLDEMO_MANGOFRUIT_H
 #include <iostream>
 
 class mangoFruit {
@@ -22,4 +22,4 @@ private:
     double weight;
 };
 
-#endif //ARBOLDEMANGO_MANGOFRUIT_H
+#endif //SFMLDEMO_MANGOFRUIT_H

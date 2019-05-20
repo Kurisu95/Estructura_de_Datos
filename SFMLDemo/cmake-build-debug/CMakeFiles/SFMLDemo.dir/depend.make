@@ -80,6 +80,8 @@ CMakeFiles/SFMLDemo.dir/Menu.cpp.o: /usr/local/include/SFML/Window/WindowStyle.h
 
 CMakeFiles/SFMLDemo.dir/main.cpp.o: ../Menu.h
 CMakeFiles/SFMLDemo.dir/main.cpp.o: ../main.cpp
+CMakeFiles/SFMLDemo.dir/main.cpp.o: ../mangoFruit.h
+CMakeFiles/SFMLDemo.dir/main.cpp.o: ../mangoTree.h
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Config.hpp
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Graphics.hpp
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -154,4 +156,11 @@ CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Window/VideoMode.hpp
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLDemo.dir/main.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
+
+CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.o: ../mangoFruit.cpp
+CMakeFiles/SFMLDemo.dir/mangoFruit.cpp.o: ../mangoFruit.h
+
+CMakeFiles/SFMLDemo.dir/mangoTree.cpp.o: ../mangoFruit.h
+CMakeFiles/SFMLDemo.dir/mangoTree.cpp.o: ../mangoTree.cpp
+CMakeFiles/SFMLDemo.dir/mangoTree.cpp.o: ../mangoTree.h
 

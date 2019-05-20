@@ -1,10 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include "Menu.h"
+#include "mangoFruit.h"
+#include "mangoTree.h"
 #include <iostream>
 
 using namespace std;
 std::vector< sf::RectangleShape > mangos;
 std::vector< sf::RectangleShape > mangos2;
+mangoTree t;
+mangoTree t2;
 
 sf::RectangleShape addSFMLMango1(int weight, int position){
 
@@ -12,23 +16,31 @@ sf::RectangleShape addSFMLMango1(int weight, int position){
     sf::RectangleShape mango;
     mango.setSize(sf::Vector2f(100, 130));
     mango.setFillColor(sf::Color(255, 110, 0));
+    mangoFruit *fruit = new mangoFruit(weight);
+
     switch (position){
         case 1:
+            t.addMango(fruit);
             mango.setPosition(100.0f,700.0f);
             break;
         case 2:
+            t.addMango(fruit);
             mango.setPosition(80.0f,450.0f);
             break;
         case 3:
+            t.addMango(fruit);
             mango.setPosition(250.0f,550.0f);
             break;
         case 4:
+            t.addMango(fruit);
             mango.setPosition(350.0f,350.0f);
             break;
         case 5:
+            t.addMango(fruit);
             mango.setPosition(600.0f,450.0f);
             break;
         case 6:
+            t.addMango(fruit);
             mango.setPosition(700.0f,600.0f);
             break;
     }
@@ -43,23 +55,30 @@ sf::RectangleShape addSFMLMango2(int weight, int position){
     sf::RectangleShape mango;
     mango.setSize(sf::Vector2f(100, 130));
     mango.setFillColor(sf::Color(255, 110, 0));
+    mangoFruit *fruit = new mangoFruit(weight);
     switch (position){
         case 1:
+            t2.addMango(fruit);
             mango.setPosition(1100.0f,700.0f);
             break;
         case 2:
+            t2.addMango(fruit);
             mango.setPosition(1080.0f,450.0f);
             break;
         case 3:
+            t2.addMango(fruit);
             mango.setPosition(1250.0f,550.0f);
             break;
         case 4:
+            t2.addMango(fruit);
             mango.setPosition(1350.0f,350.0f);
             break;
         case 5:
+            t2.addMango(fruit);
             mango.setPosition(1600.0f,450.0f);
             break;
         case 6:
+            t2.addMango(fruit);
             mango.setPosition(1700.0f,600.0f);
             break;
     }
@@ -192,9 +211,12 @@ int main() {
                                             std::cout << "Inserting Fruit" << std::endl;
                                             break;
                                         case 2:
-                                            std::cout << "Deleting Fruit" << std::endl;
                                             if(mangos.size()){
+                                                std::cout << "Deleting Fruit" << std::endl;
+                                                t.deleteMango(1);
                                                 mangos.erase(mangos.begin());
+                                            }else{
+                                                std::cout << "Tree is Empty" << std::endl;
                                             }
                                             treeView = true;
                                             menu1view = false;
@@ -251,10 +273,13 @@ int main() {
                                             std::cout << "Inserting Fruit" << std::endl;
                                             break;
                                         case 2:
-                                            std::cout << "Deleting Fruit" << std::endl;
-                                            if(mangos2.size())
+                                            if(mangos2.size()){
+                                                cout << "Deleting Fruit" << std::endl;
+                                                t2.deleteMango(1);
                                                 mangos2.erase(mangos2.begin());
-
+                                            }else{
+                                                cout << "Tree Is Empty" << std::endl;
+                                            }
                                             treeView = true;
                                             menu2view = false;
                                             break;

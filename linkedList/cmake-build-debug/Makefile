@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named arbolDeMango
+# Target rules for targets named linkedList
 
 # Build rule for target.
-arbolDeMango: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arbolDeMango
-.PHONY : arbolDeMango
+linkedList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 linkedList
+.PHONY : linkedList
 
 # fast build rule for target.
-arbolDeMango/fast:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/build
-.PHONY : arbolDeMango/fast
+linkedList/fast:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/build
+.PHONY : linkedList/fast
+
+Menu.o: Menu.cpp.o
+
+.PHONY : Menu.o
+
+# target to build an object file
+Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/Menu.cpp.o
+.PHONY : Menu.cpp.o
+
+Menu.i: Menu.cpp.i
+
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
 
 main.o: main.cpp.o
 
@@ -129,7 +156,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,62 +174,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/linkedList.dir/build.make CMakeFiles/linkedList.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-mangoFruit.o: mangoFruit.cpp.o
-
-.PHONY : mangoFruit.o
-
-# target to build an object file
-mangoFruit.cpp.o:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoFruit.cpp.o
-.PHONY : mangoFruit.cpp.o
-
-mangoFruit.i: mangoFruit.cpp.i
-
-.PHONY : mangoFruit.i
-
-# target to preprocess a source file
-mangoFruit.cpp.i:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoFruit.cpp.i
-.PHONY : mangoFruit.cpp.i
-
-mangoFruit.s: mangoFruit.cpp.s
-
-.PHONY : mangoFruit.s
-
-# target to generate assembly for a file
-mangoFruit.cpp.s:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoFruit.cpp.s
-.PHONY : mangoFruit.cpp.s
-
-mangoTree.o: mangoTree.cpp.o
-
-.PHONY : mangoTree.o
-
-# target to build an object file
-mangoTree.cpp.o:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoTree.cpp.o
-.PHONY : mangoTree.cpp.o
-
-mangoTree.i: mangoTree.cpp.i
-
-.PHONY : mangoTree.i
-
-# target to preprocess a source file
-mangoTree.cpp.i:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoTree.cpp.i
-.PHONY : mangoTree.cpp.i
-
-mangoTree.s: mangoTree.cpp.s
-
-.PHONY : mangoTree.s
-
-# target to generate assembly for a file
-mangoTree.cpp.s:
-	$(MAKE) -f CMakeFiles/arbolDeMango.dir/build.make CMakeFiles/arbolDeMango.dir/mangoTree.cpp.s
-.PHONY : mangoTree.cpp.s
 
 # Help Target
 help:
@@ -212,16 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... arbolDeMango"
+	@echo "... linkedList"
+	@echo "... Menu.o"
+	@echo "... Menu.i"
+	@echo "... Menu.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mangoFruit.o"
-	@echo "... mangoFruit.i"
-	@echo "... mangoFruit.s"
-	@echo "... mangoTree.o"
-	@echo "... mangoTree.i"
-	@echo "... mangoTree.s"
 .PHONY : help
 
 
