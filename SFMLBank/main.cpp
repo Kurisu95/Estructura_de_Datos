@@ -8,6 +8,7 @@
 using namespace std;
 
 std::vector< sf::CircleShape > line;
+std::vector< int > arrangements;
 int arr[9];
 Cashier t;
 
@@ -47,44 +48,36 @@ sf::CircleShape SFMLEnqueue(char priority){
 
     switch (position){
         case 1:
-            t.Enqueue(customer);
             client.setPosition(260.0f,425.0f);
             break;
         case 2:
-            t.Enqueue(customer);
             client.setPosition(460.0f,425.0f);
             break;
         case 3:
-            t.Enqueue(customer);
             client.setPosition(660.0f,425.0f);
             break;
         case 4:
-            t.Enqueue(customer);
             client.setPosition(260.0f,620.0f);
             break;
         case 5:
-            t.Enqueue(customer);
             client.setPosition(460.0f,620.0f);
             break;
         case 6:
-            t.Enqueue(customer);
             client.setPosition(660.0f,620.0f);
             break;
         case 7:
-            t.Enqueue(customer);
             client.setPosition(260.0f,820.0f);
             break;
         case 8:
-            t.Enqueue(customer);
             client.setPosition(460.0f,820.0f);
             break;
         case 9:
-            t.Enqueue(customer);
             client.setPosition(660.0f,820.0f);
             break;
     }
-
-    line.push_back(client);
+    int pos = t.Enqueue(customer);
+    line.insert(line.begin() + pos, client);
+    arrangements.insert(arrangements.begin() + pos,pos);
     return client;
 }
 
@@ -157,6 +150,8 @@ int main() {
                                             if(line.size() != 0){
                                                 t.Dequeue();
                                                 line.erase(line.begin());
+                                                arr[arrangements[0]] = 0;
+                                                arrangements.erase(arrangements.begin());
                                             }else{
                                                 cout<<"Bank is EMPTY"<<endl;
                                             }
@@ -232,12 +227,14 @@ int main() {
         }
 
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-            if((sf::Mouse::getPosition(window).x >1255 && sf::Mouse::getPosition(window).x <1735) &&
-               sf::Mouse::getPosition(window).y > 640 && sf::Mouse::getPosition(window).y <990
-                    ){
-                bankView = false;
-                menu1view = true;
+            if(bankView){
+                if((sf::Mouse::getPosition(window).x >1255 && sf::Mouse::getPosition(window).x <1735) &&
+                   sf::Mouse::getPosition(window).y > 640 && sf::Mouse::getPosition(window).y <990
+                        ){
+                    bankView = false;
+                    menu1view = true;
 
+                }
             }
 
         }
