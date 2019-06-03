@@ -11,6 +11,7 @@ Cashier::Cashier() {
     head = nullptr;
     tail = nullptr;
     counter = 0;
+    position = 0;
 
 }
 
@@ -33,22 +34,17 @@ void Cashier::decreaseCounter() {
 }
 
 int Cashier::Enqueue(Customer *c) {
-    int counter = 0;
+    Customer *temp = head;
 
     if (isEmpty() == true) {
 
         head = c;
         tail = c;
         c->next = nullptr;
-        return counter;
 
     }
     else {
 
-        //int typeACounter = 0;
-
-        Customer *temp = head;
-        Customer *temp2 = new Customer();
 
         //if priorityAccess is A
         if (c->getPriorityTicket() == 'A'){
@@ -58,7 +54,8 @@ int Cashier::Enqueue(Customer *c) {
 
                 head = c;
                 c->next = temp;
-                return counter;
+
+                return position;
 
             }
                 //Enqueuing newcoming A's
@@ -67,12 +64,12 @@ int Cashier::Enqueue(Customer *c) {
                 while (temp->getPriorityTicket() == 'A' && temp->next != nullptr && temp->next->getPriorityTicket() == 'A') {
 
                     temp = temp->next;
-                    counter++;
 
                 }
+                position++;
                 c->next = temp->next;
                 temp->next = c;
-                return counter;
+                return position;
 
 
             }
@@ -82,18 +79,49 @@ int Cashier::Enqueue(Customer *c) {
 
             while (temp->next != nullptr) {
                 temp = temp->next;
-                counter++;
             }
+            position++;
             tail = temp;
             tail->next = c;
             tail = c;
-            return counter;
+            return position;
 
         }
             //if we want to insert a Third priority [C] after 3 customers or after every A
         else if (c->getPriorityTicket() == 'C') {
 
+            int nCounter = 1;
 
+            if (head->getPriorityTicket() == 'A') {
+
+                while (temp->getPriorityTicket() == 'A' && temp->next != nullptr && temp->next->getPriorityTicket() == 'A') {
+                    temp = temp->next;
+                }
+                position++;
+                c->next = temp->next;
+                temp->next = c;
+                return position;
+
+            }
+            else if (head->getPriorityTicket() != 'A') {
+
+                while (temp->next != nullptr && nCounter != 3) {
+                    temp = temp->next;
+                    nCounter++;
+                }
+                position++;
+                if (nCounter == 3) {
+                    c->next = temp->next;
+                    temp->next = c;
+                }
+                else if (temp->next->getPriorityTicket() == 'C' && c->getPriorityTicket() == 'C') {
+                    Customer *temp2 = temp->next;
+                    c->next = temp2->next;
+                    temp2->next = c;
+                }
+
+                return position;
+            }
 
         }
             //if we insert an Element D or better known as a A.5
@@ -102,39 +130,33 @@ int Cashier::Enqueue(Customer *c) {
 
                 head = c;
                 c->next = temp;
-                return 1;
+                return position;
 
             }
-                /*else if ((temp->getPriorityTicket() == 'A' || temp->getPriorityTicket() == 'D') && temp->next == nullptr) {
-                    temp->next = c;
-                    c->next = nullptr;
-                    tail = c;
-                    return 1;
-                }*/
             else if (temp->getPriorityTicket() == 'A' || temp->getPriorityTicket() == 'D') {
 
                 while ((temp->getPriorityTicket() == 'A' || temp->getPriorityTicket() == 'D') && temp->next != nullptr &&
                        (temp->next->getPriorityTicket() == 'A' || temp->next->getPriorityTicket() == 'D')) {
 
                     temp = temp->next;
-                    counter++;
 
                 }
+                position++;
                 c->next = temp->next;
                 temp->next = c;
-                return counter;
+                return position;
 
             }
 
         }
     }
 
-    return counter;
+    return position;
 }
 
 int Cashier::Dequeue() {
 
-    Customer *c;
+    Customer *c = new Customer();
 
     if (isEmpty()) {
 
@@ -142,14 +164,17 @@ int Cashier::Dequeue() {
         return -2;
     }
     else {
+        if(c){
+            c = head;
+            cout << "\nDequeing: " << c->getIdNumber() << endl;
+            head = c->next;
+            c->next = nullptr;
+            delete c;
 
-        c = head;
-        cout << "\nDequeing: " << c->getIdNumber() << endl;
-        head = c->next;
-        c->next = nullptr;
-        delete c;
-
-        decreaseCounter();
+            position--;
+        }else{
+            cout << "Queue is empty" << endl;
+        }
         return 0;
 
     }

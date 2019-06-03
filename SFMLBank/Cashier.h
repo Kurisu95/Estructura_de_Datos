@@ -20,6 +20,7 @@ public:
     void print();
     Customer *head;
     Customer *tail;
+    int position;
 
 private:
 

@@ -35,7 +35,6 @@ public:
     Customer *next;
 
 private:
-
     char priority;
     string operation;
     int id;

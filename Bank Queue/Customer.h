@@ -5,6 +5,7 @@
 #ifndef BANK_QUEUE_CUSTOMER_H
 #define BANK_QUEUE_CUSTOMER_H
 
+#include <iostream>
 #include <string>
 
 using namespace std;
@@ -18,19 +19,23 @@ enum opType {
 
 };
 
+
 class Customer {
 
 public:
     Customer();
-    Customer(int, opType);
+    Customer(int, opType, char);
     string getOperationType();
     void setOperationType(opType);
+    void setPriorityTicket(char);
+    char getPriorityTicket();
     int getIdNumber();
     void setIdNumber(int);
     Customer *next;
 
 private:
 
+    char priority;
     string operation;
     int id;
 

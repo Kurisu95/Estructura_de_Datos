@@ -35,13 +35,13 @@ sf::CircleShape SFMLEnqueue(char priority){
             client.setFillColor(sf::Color::Red);
             break;
         case 'B':
-            client.setFillColor(sf::Color::Yellow);
+            client.setFillColor(sf::Color::Blue);
             break;
         case 'C':
             client.setFillColor(sf::Color::Green);
             break;
         case 'D':
-            client.setFillColor(sf::Color::Blue);
+            client.setFillColor(sf::Color::Yellow);
             break;
 
     }
