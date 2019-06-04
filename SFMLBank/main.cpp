@@ -76,6 +76,7 @@ sf::CircleShape SFMLEnqueue(char priority){
             break;
     }
     int pos = t.Enqueue(customer);
+    cout<< pos <<endl;
     line.insert(line.begin() + pos, client);
     arrangements.insert(arrangements.begin() + pos,pos);
     return client;

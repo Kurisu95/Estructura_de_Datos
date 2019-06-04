@@ -55,11 +55,12 @@ int Cashier::Enqueue(Customer *c) {
                 head = c;
                 c->next = temp;
 
-                return position;
+                return 0;
 
             }
                 //Enqueuing newcoming A's
             else if (temp->getPriorityTicket() == 'A') {
+                position = 0;
 
                 while (temp->getPriorityTicket() == 'A' && temp->next != nullptr && temp->next->getPriorityTicket() == 'A') {
 
