@@ -123,7 +123,7 @@ int Cashier::Enqueue(Customer *c) {
 
                 head = c;
                 c->next = temp;
-                return position;
+                return 0;
 
             }
             else if (temp->getPriorityTicket() == 'A' || temp->getPriorityTicket() == 'D') {
