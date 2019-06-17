@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Hash.cpp
+Hash.h
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Hash.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Hash.h
+Receipt.h
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Receipt.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Receipt.cpp
+Receipt.h
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Receipt.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Receipt.h
+string.h
+-
+iostream
+-
+
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/main.cpp
+iostream
+-
+Hash.h
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Hash.h
+Receipt.h
+/Users/christianrivera/Documents/Estructura_de_Datos/HashTable/Receipt.h
+string
+-
+

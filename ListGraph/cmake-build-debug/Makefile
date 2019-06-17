@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/PracticeHash
+CMAKE_SOURCE_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/ListGraph
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/PracticeHash/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/PracticeHash/cmake-build-debug/CMakeFiles /Users/christianrivera/Documents/Estructura_de_Datos/PracticeHash/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/CMakeFiles /Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/PracticeHash/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,71 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PracticeHash
+# Target rules for targets named ListGraph
 
 # Build rule for target.
-PracticeHash: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 PracticeHash
-.PHONY : PracticeHash
+ListGraph: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ListGraph
+.PHONY : ListGraph
 
 # fast build rule for target.
-PracticeHash/fast:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/build
-.PHONY : PracticeHash/fast
+ListGraph/fast:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/build
+.PHONY : ListGraph/fast
 
-Hash.o: Hash.cpp.o
+Edge.o: Edge.cpp.o
 
-.PHONY : Hash.o
-
-# target to build an object file
-Hash.cpp.o:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Hash.cpp.o
-.PHONY : Hash.cpp.o
-
-Hash.i: Hash.cpp.i
-
-.PHONY : Hash.i
-
-# target to preprocess a source file
-Hash.cpp.i:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Hash.cpp.i
-.PHONY : Hash.cpp.i
-
-Hash.s: Hash.cpp.s
-
-.PHONY : Hash.s
-
-# target to generate assembly for a file
-Hash.cpp.s:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Hash.cpp.s
-.PHONY : Hash.cpp.s
-
-Receipt.o: Receipt.cpp.o
-
-.PHONY : Receipt.o
+.PHONY : Edge.o
 
 # target to build an object file
-Receipt.cpp.o:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Receipt.cpp.o
-.PHONY : Receipt.cpp.o
+Edge.cpp.o:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Edge.cpp.o
+.PHONY : Edge.cpp.o
 
-Receipt.i: Receipt.cpp.i
+Edge.i: Edge.cpp.i
 
-.PHONY : Receipt.i
+.PHONY : Edge.i
 
 # target to preprocess a source file
-Receipt.cpp.i:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Receipt.cpp.i
-.PHONY : Receipt.cpp.i
+Edge.cpp.i:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Edge.cpp.i
+.PHONY : Edge.cpp.i
 
-Receipt.s: Receipt.cpp.s
+Edge.s: Edge.cpp.s
 
-.PHONY : Receipt.s
+.PHONY : Edge.s
 
 # target to generate assembly for a file
-Receipt.cpp.s:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/Receipt.cpp.s
-.PHONY : Receipt.cpp.s
+Edge.cpp.s:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Edge.cpp.s
+.PHONY : Edge.cpp.s
+
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
+
+Vertex.o: Vertex.cpp.o
+
+.PHONY : Vertex.o
+
+# target to build an object file
+Vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Vertex.cpp.o
+.PHONY : Vertex.cpp.o
+
+Vertex.i: Vertex.cpp.i
+
+.PHONY : Vertex.i
+
+# target to preprocess a source file
+Vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Vertex.cpp.i
+.PHONY : Vertex.cpp.i
+
+Vertex.s: Vertex.cpp.s
+
+.PHONY : Vertex.s
+
+# target to generate assembly for a file
+Vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/Vertex.cpp.s
+.PHONY : Vertex.cpp.s
 
 main.o: main.cpp.o
 
@@ -183,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +228,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/PracticeHash.dir/build.make CMakeFiles/PracticeHash.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/ListGraph.dir/build.make CMakeFiles/ListGraph.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -212,13 +239,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... PracticeHash"
-	@echo "... Hash.o"
-	@echo "... Hash.i"
-	@echo "... Hash.s"
-	@echo "... Receipt.o"
-	@echo "... Receipt.i"
-	@echo "... Receipt.s"
+	@echo "... ListGraph"
+	@echo "... Edge.o"
+	@echo "... Edge.i"
+	@echo "... Edge.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
+	@echo "... Vertex.o"
+	@echo "... Vertex.i"
+	@echo "... Vertex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

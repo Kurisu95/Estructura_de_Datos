@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ListGraph"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ListGraph">
+				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/ListGraph" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 ListGraph"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ListGraph/fast">
+				<Option output="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/ListGraph" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 ListGraph/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Edge.cpp">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Edge.h">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Graph.cpp">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Graph.h">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Vertex.cpp">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/Vertex.h">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/main.cpp">
+			<Option target="ListGraph"/>
+		</Unit>
+		<Unit filename="/Users/christianrivera/Documents/Estructura_de_Datos/ListGraph/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
-project(HashTable)
+project(PracticeHash)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(HashTable main.cpp Hash.cpp Hash.h Invoice.cpp Invoice.h)
+add_executable(PracticeHash main.cpp Hash.cpp Hash.h Receipt.cpp Receipt.h)
