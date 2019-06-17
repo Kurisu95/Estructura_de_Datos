@@ -39,7 +39,6 @@ int main()
 
     do
     {
-        system("cls");
         cout << "1. Ingresar Vertice" << endl;
         cout << "2. Ingresar arista" << endl;
         cout << "3. Lista de adyacencia" << endl;
@@ -56,7 +55,6 @@ int main()
             case 1:
             {
                 string nombre;
-                system("cls");
                 cout << "Ingrese el nombre del vertice: ";
                 cin.ignore();
                 getline(cin, nombre, '\n');
@@ -69,7 +67,6 @@ int main()
             {
                 string origen, destino;
                 int peso;
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -99,7 +96,6 @@ int main()
             }
             case 3:
             {
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -114,7 +110,6 @@ int main()
             }
             case 4:
             {
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -130,7 +125,6 @@ int main()
             case 5:
             {
                 string nombre;
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -156,7 +150,6 @@ int main()
             case 6:
             {
                 string origen, destino;
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -183,7 +176,6 @@ int main()
             }
             case 7:
             {
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
@@ -199,7 +191,6 @@ int main()
             case 8:
             {
                 string nombre;
-                system("cls");
                 if (G->isEmpty())
                 {
                     cout << "El grafo esta vacio" << endl;
