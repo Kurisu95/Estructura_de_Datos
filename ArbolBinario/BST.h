@@ -14,19 +14,24 @@ using namespace std;
 class BST
 {
 private:
+    Node *root;
     void addLeafPrivate(int key, Node *node);
+    void PostOrderPrivate(Node *node);
     void PrintInOrderPrivate(Node *node);
+    void PreOrderPrivate(Node *node);
     Node *ReturnNodePrivate(int key, Node* node);
     int FindSmallestPrivate(Node *node);
     int FindBiggestPrivate(Node *node);
     void RemoveNodePrivate(int key, Node *node);
     void RemoveMatch(Node *parent, Node *match, bool left);
-public:
-    Node *root;
     Node *CreateLeaf(int key);
+    Node *ReturnNode(int key);
+    void RemoveSubTree(Node *Ptr);
+public:
     void addLeaf(int key);
     void PrintInOrder();
-    Node *ReturnNode(int key);
+    void PreOrder();
+    void PostOrder();
     void PrintChildren(int key);
     int FindSmallest();
     int FindBiggest();

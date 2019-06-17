@@ -6,23 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/BST.h
-iostream
--
-Node.h
-/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
-iostream
--
-Node.h
-/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
-
-/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
-iostream
--
-
-/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/main.cpp
-iostream
--
+/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/BST.cpp
 BST.h
 /Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/BST.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/BST.h
+iostream
+-
+Node.h
+/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
+iostream
+-
+Node.h
+/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
+
+/Users/christianrivera/Documents/Estructura_de_Datos/ArbolBinario/Node.h
+iostream
+-
 

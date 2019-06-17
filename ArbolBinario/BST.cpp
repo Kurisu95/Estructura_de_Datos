@@ -12,7 +12,7 @@ BST::BST()
 
 BST::~BST()
 {
-
+    RemoveSubTree(root);
 }
 
 Node *BST::CreateLeaf(int key)
@@ -69,20 +69,20 @@ void BST::PrintInOrder()
 
 void BST::PrintInOrderPrivate(Node *node)
 {
-    if (root != NULL)
-    {
+    if (root != NULL){
         if (node->left != NULL)
         {
             PrintInOrderPrivate(node->left);
         }
-        cout << node->key << " ";
+        cout << node->key <<" ";
         if (node->right != NULL)
         {
             PrintInOrderPrivate(node->right);
         }
     }
-    else
+    else{
         cout << "Tree is empty" << endl;
+    }
 }
 
 Node *BST::ReturnNode(int key)
@@ -175,7 +175,7 @@ void BST::RemoveNodePrivate(int key, Node *node) {
                 }
             }else if(key > node->key && node->right != NULL){
                 if(node->right->key == key){
-                    RemoveMatch(node, node->left, false);
+                    RemoveMatch(node, node->right, false);
                 }else{
                     RemoveNodePrivate(key, node->right);
                 }
@@ -219,7 +219,7 @@ void BST::RemoveRootMatch() {
             SmallestinRightSubtree = FindSmallestPrivate(root->right);
             RemoveNodePrivate(SmallestinRightSubtree, root);
             root->key = SmallestinRightSubtree;
-            cout<<"The root key containing key "<< rootKey<<" was overwritten with key"<< root->key<<endl;
+            cout<<"The root key containing key "<< rootKey<<" was overwritten with key "<< root->key<<endl;
         }
     }else{
         cout<<"cannot remove root, tree is empty"<<endl;
@@ -234,14 +234,82 @@ void BST::RemoveMatch(Node *parent, Node *match, bool left) {
         //case 0, no children
         if(match->left == NULL && match->right == NULL){
             deltemp = match;
-            if(left){
-                parent->left = NULL;
-            }else{
-                parent->right = NULL;
-            }
+            left  ? parent->left = NULL : parent->right = NULL;
             delete deltemp;
+            cout<<"The node containing key "<<matchKey<<" was removed "<<endl;
+        }
+        //case 1, 1 child match
+        else if(match->left == NULL && match->right != NULL){
+            left ? parent->left = match->right : parent->right = match->right;
+            match->right = NULL;
+            deltemp = match;
+            delete deltemp;
+            cout<<"The node containing key "<<matchKey<<" was removed "<<endl;
+        }else if(match->left != NULL && match->right == NULL){
+            left ? parent->left = match->left : parent->right = match->left;
+            match->right = NULL;
+            deltemp = match;
+            delete deltemp;
+            cout<<"The node containing key "<<matchKey<<" was removed "<<endl;
+        }
+        //case 2, 2 children
+        else{
+            Smallestinright = FindSmallestPrivate(match->right);
+            RemoveNodePrivate(Smallestinright, match);
+            match->key = Smallestinright;
         }
     }else{
         cout<<"Cannot Remove Match, tree is empty"<<endl;
+    }
+}
+
+void BST::RemoveSubTree(Node *Ptr) {
+    if(Ptr != NULL){
+        if(Ptr->left != NULL){
+            RemoveSubTree(Ptr->left);
+        }
+        if(Ptr->right != NULL){
+            RemoveSubTree(Ptr->right);
+        }
+        cout <<"Deleting the node containing key "<<Ptr->key<<endl;
+        delete Ptr;
+    }
+}
+
+void BST::PreOrder(){
+    PreOrderPrivate(root);
+}
+
+void BST::PostOrder(){
+    PostOrderPrivate(root);
+}
+
+void BST::PreOrderPrivate(Node *node) {
+    if(root != NULL){
+        cout<<node->key<<" ";
+
+        if(node->left != NULL){
+            PreOrderPrivate(node->left);
+        }
+        if(node->right != NULL){
+            PreOrderPrivate(node->right);
+        }
+    }else{
+        cout<<"tree is empty"<<endl;
+    }
+}
+
+void BST::PostOrderPrivate(Node *node) {
+    if(root != NULL){
+
+        if(node->left != NULL){
+            PostOrderPrivate(node->left);
+        }
+        if(node->right != NULL){
+            PostOrderPrivate(node->right);
+        }
+        cout<<node->key<<" ";
+    }else{
+        cout<<"tree is empty"<<endl;
     }
 }

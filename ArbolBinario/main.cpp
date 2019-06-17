@@ -5,32 +5,84 @@ using namespace std;
 
 int main()
 {
-    int treeKeys[16] = {50,76,21,4,32,64,15,52,14,100,83,2,3,70,87,80};
 
     BST t;
+    bool exit = false;
 
+    while(!exit){
+        cout << "1. Add Leaf" << endl;
+        cout << "2. FindSmallest" << endl;
+        cout << "3. Find Biggest" << endl;
+        cout << "4. Print InOrder" << endl;
+        cout << "5. Print PreOrder" << endl;
+        cout << "6. Print PostOrder" << endl;
+        cout << "7. Print Children" << endl;
+        cout << "8. Remove Node" << endl;
+        cout << "9. Exit" << endl;
+        cout << endl;
+        int option = 0;
+        cout << ">>> ";
+        cin >> option;
+        switch(option){
+            case 1:{
 
+                int key;
+                cout << "Type key value >>> ";
+                cin >> key;
+                t.addLeaf(key);
+                continue;
+            }
+            case 2:{
 
-//    cout << "printing the tree in order before adding numbers" << endl;
-//    t.PrintInOrder();
+                cout <<"Smallest value is:  "<<t.FindSmallest()<<endl;
+                continue;
+            }
+            case 3:{
 
-    for (int i = 0; i < 16; i++)
-    {
-        t.addLeaf(treeKeys[i]);
+                cout <<"Biggest value is:  "<< t.FindBiggest()<<endl;
+                continue;
+            }
+            case 4:{
+
+                t.PrintInOrder();
+                cout<<endl;
+                cout<<endl;
+                continue;
+            }
+            case 5:{
+
+                t.PreOrder();
+                cout<<endl;
+                cout<<endl;
+                continue;
+            }
+            case 6:{
+                t.PostOrder();
+                cout<<endl;
+                cout<<endl;
+                continue;
+            }
+            case 7:{
+                int key;
+                cout << "Type key value >>> ";
+                cin >> key;
+                t.PrintChildren(key);
+                continue;
+            }
+            case 8:{
+                int key;
+                cout << "Type key value to delete >>> ";
+                cin >> key;
+                t.RemoveNode(key);
+                continue;
+            }
+            case 9:{
+                exit = true;
+                continue;
+            }
+        }
     }
 
-//    cout << "printing the tree in order after adding numbers" << endl;
-//
-//    t.PrintInOrder();
-//    cout<<endl;
-//    t.PrintChildren(50);
-//    cout<<endl;
-//
-//    for(int i=0; i< 16; i++){
-//        t.PrintChildren(treeKeys[i]);
-//        cout<<endl;
-//    }
-    cout << t.FindSmallest()<<endl;
-    cout<< t.FindBiggest()<<endl;
-
 }
+
+//50,76,21,4,32,64,15,52,14,100,83,2,3,70,87,80
